@@ -41,6 +41,7 @@ requirements before deployment.
 - No identity or facial-recognition request
 - No emotion, health, disability, intent, guilt, or protected-trait inference
 - Conservative `uncertain` result when one image lacks context
+- Conservative 1-10 malpractice review index based only on visible indicators
 - Structured Pydantic response schema
 - 10 MB and JPG/PNG/WebP upload restrictions
 - API key remains server-side

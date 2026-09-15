@@ -32,6 +32,15 @@ def show_result(result) -> None:
     else:
         st.write("None visible in this image.")
 
+    st.subheader("Malpractice review index")
+    st.metric("Visible indicator score", f"{result.malpractice_index}/10")
+    st.progress(result.malpractice_index / 10)
+    st.write(result.malpractice_index_reason)
+    st.caption(
+        "This review index does not establish cheating, intent, or guilt. "
+        "A human must assess the surrounding context."
+    )
+
     attention = result.supervisor_attention.upper().replace("_", " ")
     if attention == "NEEDED":
         st.error(f"Supervisor attention: {attention}")
